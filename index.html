@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Магазин электроники и техники</title>
+    <meta name="description" content="TechStore - интернет-магазин техники. Смартфоны, ноутбуки, планшеты, наушники. Гарантия 2 года, доставка по России, выгодные цены.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TechStore</h1>
+            <p>Магазин электроники</p>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <!-- Добавляем ссылку на корзину с счетчиком -->
+            <a href="#" id="open-cart">Корзина <span class="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Техника будущего уже сегодня</h2>
+            <p>Самые современные гаджеты по лучшим ценам</p>
+            <a href="catalog.html" class="btn">Смотреть каталог</a>
+        </section>
+
+        <section class="products">
+            <h2>Хиты продаж</h2>
+            <div class="product-grid">
+                <!-- iPhone 15 Pro -->
+                <div class="product">
+                    <img src="https://avatars.mds.yandex.net/get-marketpic/12591091/pic47209876819a94ae18176ac038ea8f47/orig" 
+                         alt="Смартфон Apple iPhone 15 Pro в синем цвете">
+                    <h3>iPhone 15 Pro</h3>
+                    <p>Самый мощный iPhone</p>
+                    <span class="price">89 990 ₽</span>
+                    <button class="btn add-to-cart" 
+                            data-id="1" 
+                            data-name="iPhone 15 Pro"
+                            data-price="89990">
+                        Добавить в корзину
+                    </button>
+                    <a href="product.html?id=1" class="btn btn-secondary" style="margin-top: 10px;">Подробнее</a>
+                </div>
+                
+                <!-- MacBook Air M2 -->
+                <div class="product">
+                    <img src="https://img.tehnomaks.ru/img/prod/full/783c514e777447e4e7c29e29035e9d37616cac3f.jpg" 
+                         alt="Ноутбук Apple MacBook Air M2 серебристый">
+                    <h3>MacBook Air M2</h3>
+                    <p>Ультратонкий и мощный</p>
+                    <span class="price">99 990 ₽</span>
+                    <button class="btn add-to-cart" 
+                            data-id="2" 
+                            data-name="MacBook Air M2"
+                            data-price="99990">
+                        Добавить в корзину
+                    </button>
+                    <a href="product.html?id=2" class="btn btn-secondary" style="margin-top: 10px;">Подробнее</a>
+                </div>
+                
+                <!-- AirPods Pro 2 -->
+                <div class="product">
+                    <img src="https://avatars.mds.yandex.net/get-mpic/1554397/2a00000191ddf02b105288dc731601ef5c21/9hq" 
+                         alt="Наушники Apple AirPods Pro 2 белые">
+                    <h3>AirPods Pro 2</h3>
+                    <p>Лучшее шумоподавление</p>
+                    <span class="price">24 990 ₽</span>
+                    <button class="btn add-to-cart" 
+                            data-id="3" 
+                            data-name="AirPods Pro 2"
+                            data-price="24990">
+                        Добавить в корзину
+                    </button>
+                    <a href="product.html?id=3" class="btn btn-secondary" style="margin-top: 10px;">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Почему выбирают нас</h2>
+            <div class="feature">
+                <h3>🚚 Быстрая доставка</h3>
+                <p>Доставка за 1-2 дня по всей России</p>
+            </div>
+            <div class="feature">
+                <h3>✅ Гарантия 2 года</h3>
+                <p>Официальная гарантия на все товары</p>
+            </div>
+            <div class="feature">
+                <h3>💳 Рассрочка 0%</h3>
+                <p>Беспроцентная рассрочка на 12 месяцев</p>
+            </div>
+        </section>
+
+        <!-- Модальное окно корзины -->
+        <div id="cart-modal" class="cart-modal">
+            <div class="cart-modal-content">
+                <span class="close-cart">&times;</span>
+                <h2>Ваша корзина</h2>
+                <div id="cart-items"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 TechStore. Лабораторная работа по SEO.</p>
+        <p>Телефон: 8 (800) 123-45-67</p>
+        <p>Email: info@techstore-lab.ru</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

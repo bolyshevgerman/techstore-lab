@@ -1,0 +1,24 @@
+# Robots.txt для интернет-магазина TechStore
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /*?add_to_cart=
+Disallow: /*?order_id=
+Disallow: /*?user_id=
+
+# Правила для Яндекс
+User-agent: Yandex
+Clean-param: utm_source&utm_medium&utm_campaign
+Crawl-delay: 2.0
+
+# Правила для Google
+User-agent: Googlebot
+Allow: /product.html?id=
+
+# Карта сайта
+Sitemap: https://bolyshevgerman.github.io/techstore-lab/sitemap.xml
+
+# Главное зеркало
+Host: https://bolyshevgerman.github.io/techstore-lab/
