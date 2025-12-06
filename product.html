@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone 15 Pro 256GB | Купить в TechStore</title>
-    <meta name="description" content="Купить iPhone 15 Pro 256GB в TechStore. Титан, A17 Pro, 48 МП камера. Гарантия 2 года, доставка. Цена: 89 990 ₽.">
+    <title>TechStore | Детальная страница товара</title>
+    <meta name="description" content="Детальное описание товаров в TechStore: iPhone 15 Pro, MacBook Air M2, AirPods Pro 2. Характеристики, фото, цены.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,49 +18,335 @@
             <a href="catalog.html">Каталог</a>
             <a href="about.html">О нас</a>
             <a href="contacts.html">Контакты</a>
+            <a href="#" id="open-cart" class="cart-link">
+                🛒 Корзина <span class="cart-count">0</span>
+            </a>
         </nav>
     </header>
+
+    <!-- Модальное окно корзины -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>🛒 Ваша корзина</h2>
+            <button class="close-cart">&times;</button>
+            <div id="cart-items"></div>
+        </div>
+    </div>
 
     <main>
         <div class="breadcrumbs">
             <a href="index.html">Главная</a> > 
             <a href="catalog.html">Каталог</a> > 
-            <span>iPhone 15 Pro</span>
+            <span>Детали товара</span>
         </div>
 
-        <article class="product-detail">
+        <!-- iPhone 15 Pro -->
+        <article class="product-detail" id="iphone">
             <h1>Apple iPhone 15 Pro 256GB</h1>
             
             <div class="product-images">
-                <img src="images/iphone-detail.jpg" alt="iPhone 15 Pro в титановом корпусе, вид спереди">
+                <img src="https://avatars.mds.yandex.net/get-marketpic/12591091/pic47209876819a94ae18176ac038ea8f47/orig" 
+                     alt="iPhone 15 Pro в титановом корпусе, вид спереди"
+                     onclick="window.open(this.src, '_blank')"
+                     style="cursor: zoom-in; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <button onclick="window.open('https://avatars.mds.yandex.net/get-marketpic/12591091/pic47209876819a94ae18176ac038ea8f47/orig', '_blank')" 
+                            class="btn" style="padding: 10px 20px;">
+                        📸 Увеличить фото
+                    </button>
+                </div>
             </div>
 
             <div class="product-info">
-                <h2>Характеристики</h2>
-                <ul>
-                    <li><strong>Дисплей:</strong> 6.1" Super Retina XDR</li>
-                    <li><strong>Процессор:</strong> A17 Pro</li>
-                    <li><strong>Память:</strong> 256GB</li>
-                    <li><strong>Камера:</strong> Основная 48 МП</li>
-                    <li><strong>Материал:</strong> Титан</li>
-                </ul>
+                <h2>Характеристики iPhone 15 Pro</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <strong>Дисплей:</strong>
+                        <span>6.1" Super Retina XDR OLED<br>2556×1179 пикселей<br>120Hz ProMotion</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Процессор:</strong>
+                        <span>A17 Pro (3 нм)<br>6-ядерный CPU<br>6-ядерный GPU</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Память:</strong>
+                        <span>256GB NVMe<br>8GB оперативной памяти</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Камеры:</strong>
+                        <span>Основная: 48 МП, f/1.78<br>Ультраширокая: 12 МП<br>Телефото: 12 МП, 3× zoom</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Материал:</strong>
+                        <span>Титановый корпус<br>Ceramic Shield фронтальное стекло</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Батарея:</strong>
+                        <span>3274 mAh<br>До 23 часов видео<br>Быстрая зарядка 20W</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Связь:</strong>
+                        <span>5G, Wi-Fi 6E<br>Bluetooth 5.3<br>NFC, UWB</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Защита:</strong>
+                        <span>IP68 (водо-пылезащита)<br>Face ID</span>
+                    </div>
+                </div>
 
                 <div class="price-section">
-                    <span class="price">89 990 ₽</span>
-                    <button class="btn">Добавить в корзину</button>
+                    <div class="price">89 990 ₽</div>
+                    <div class="stock-status" style="color: #4CAF50; margin: 10px 0;">
+                        ✅ В наличии • Доставка 1-2 дня
+                    </div>
+                    <button class="btn add-to-cart" data-id="1" data-name="iPhone 15 Pro" style="padding: 15px 30px; font-size: 18px;">
+                        🛒 Добавить в корзину
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.location.href='index.html#iphone'" style="margin-top: 10px;">
+                        ← Назад к товарам
+                    </button>
                 </div>
             </div>
 
             <section class="description">
-                <h2>Описание товара</h2>
-                <p>iPhone 15 Pro — первый iPhone из титана. Самый прочный и легкий корпус Pro.</p>
-                <p>Новый процессор A17 Pro открывает новые возможности для игр и работы.</p>
+                <h2>Описание iPhone 15 Pro</h2>
+                <p><strong>iPhone 15 Pro</strong> — первый iPhone из титана, сочетающий невероятную прочность с минимальным весом. Новый процессор <strong>A17 Pro</strong> открывает эру мобильных игр консольного уровня.</p>
+                
+                <h3>Ключевые особенности:</h3>
+                <ul>
+                    <li><strong>Титановый дизайн:</strong> Самый прочный и легкий корпус в истории iPhone</li>
+                    <li><strong>Кнопка действий:</strong> Программируемая кнопка для быстрого доступа к функциям</li>
+                    <li><strong>USB-C:</strong> Универсальный разъем для быстрой передачи данных до 10 Гбит/с</li>
+                    <li><strong>Трассировка лучей:</strong> Аппаратное ускорение для реалистичной графики в играх</li>
+                    <li><strong>Фотореализм:</strong> Новая система камер с портретным режимом без переключения</li>
+                </ul>
             </section>
         </article>
+
+        <!-- MacBook Air M2 -->
+        <article class="product-detail" id="macbook" style="margin-top: 60px; border-top: 2px solid #eee; padding-top: 40px;">
+            <h1>Apple MacBook Air M2 13" 256GB</h1>
+            
+            <div class="product-images">
+                <img src="https://img.tehnomaks.ru/img/prod/full/783c514e777447e4e7c29e29035e9d37616cac3f.jpg" 
+                     alt="Ноутбук Apple MacBook Air M2 серебристый"
+                     onclick="window.open(this.src, '_blank')"
+                     style="cursor: zoom-in; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <button onclick="window.open('https://img.tehnomaks.ru/img/prod/full/783c514e777447e4e7c29e29035e9d37616cac3f.jpg', '_blank')" 
+                            class="btn" style="padding: 10px 20px;">
+                        📸 Увеличить фото
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h2>Характеристики MacBook Air M2</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <strong>Дисплей:</strong>
+                        <span>13.6" Liquid Retina<br>2560×1664 пикселей<br>500 нит, P3 Wide Color</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Процессор:</strong>
+                        <span>Apple M2<br>8-ядерный CPU<br>10-ядерный GPU<br>16-ядерный Neural Engine</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Память:</strong>
+                        <span>256GB SSD<br>8GB унифицированной памяти</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Аккумулятор:</strong>
+                        <span>До 18 часов работы<br>52.6 Вт·ч литий-полимерный<br>Адаптер 30W или 35W</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Порты:</strong>
+                        <span>2 × Thunderbolt / USB 4<br>Разъем для наушников 3.5 мм<br>MagSafe 3</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Аудио:</strong>
+                        <span>4 динамика<br>Поддержка Spatial Audio<br>3 микрофона с шумоподавлением</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Камера:</strong>
+                        <span>FaceTime HD 1080p<br>Функция "Режим студии"</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Вес и габариты:</strong>
+                        <span>Толщина: 1.13 см<br>Вес: 1.24 кг<br>Алюминиевый корпус</span>
+                    </div>
+                </div>
+
+                <div class="price-section">
+                    <div class="price">99 990 ₽</div>
+                    <div class="stock-status" style="color: #4CAF50; margin: 10px 0;">
+                        ✅ В наличии • Бесплатная доставка
+                    </div>
+                    <button class="btn add-to-cart" data-id="2" data-name="MacBook Air M2" style="padding: 15px 30px; font-size: 18px;">
+                        🛒 Добавить в корзину
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.location.href='index.html#macbook'" style="margin-top: 10px;">
+                        ← Назад к товарам
+                    </button>
+                </div>
+            </div>
+
+            <section class="description">
+                <h2>Описание MacBook Air M2</h2>
+                <p><strong>MacBook Air с чипом M2</strong> — невероятно тонкий и легкий ноутбук с выдающейся производительностью. Переработанный дизайн, более яркий дисплей и вседневная автономность.</p>
+                
+                <h3>Ключевые особенности:</h3>
+                <ul>
+                    <li><strong>Чип M2:</strong> До 18% быстрее CPU и до 35% быстрее GPU чем M1</li>
+                    <li><strong>Бесшумная работа:</strong> Отсутствие вентиляторов, полная тишина</li>
+                    <li><strong>MagSafe:</strong> Быстрая зарядка и безопасное отсоединение кабеля</li>
+                    <li><strong>Дисплей Liquid Retina:</strong> На 25% ярче, на 1/4 меньше рамки</li>
+                    <li><strong>Экосистема Apple:</strong> Бесшовная интеграция с iPhone, iPad, AirPods</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- AirPods Pro 2 -->
+        <article class="product-detail" id="airpods" style="margin-top: 60px; border-top: 2px solid #eee; padding-top: 40px;">
+            <h1>Apple AirPods Pro 2 с футляром MagSafe</h1>
+            
+            <div class="product-images">
+                <img src="https://avatars.mds.yandex.net/get-mpic/1554397/2a00000191ddf02b105288dc731601ef5c21/9hq" 
+                     alt="Наушники Apple AirPods Pro 2 белые"
+                     onclick="window.open(this.src, '_blank')"
+                     style="cursor: zoom-in; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); max-width: 400px;">
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <button onclick="window.open('https://avatars.mds.yandex.net/get-mpic/1554397/2a00000191ddf02b105288dc731601ef5c21/9hq', '_blank')" 
+                            class="btn" style="padding: 10px 20px;">
+                        📸 Увеличить фото
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h2>Характеристики AirPods Pro 2</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <strong>Шумоподавление:</strong>
+                        <span>Активное (до 2× лучше)<br>Адаптивный режим<br>Прозрачный режим</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Аудио:</strong>
+                        <span>Пользовательский драйвер<br>Адаптивный эквалайзер<br>Персональзированное простраство</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Чип:</strong>
+                        <span>Apple H2<br>Новый низколатентный протокол</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Аккумулятор:</strong>
+                        <span>До 6 часов (ANC включен)<br>До 30 часов с футляром<br>Быстрая зарядка 5 мин = 1 час</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Управление:</strong>
+                        <span>Сенсорное (громкость на стебле)<br>Обнаружение в ухе<br>Автопереключение устройств</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Футляр:</strong>
+                        <span>MagSafe, Qi, Apple Watch зарядка<br>Встроенный динамик<br>Ремешок для крепления</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Защита:</strong>
+                        <span>IPX4 (влагозащита)<br>УФ-стойкое покрытие</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Совместимость:</strong>
+                        <span>iOS 16+, iPadOS 16+<br>Android (базовые функции)<br>Bluetooth 5.3</span>
+                    </div>
+                </div>
+
+                <div class="price-section">
+                    <div class="price">24 990 ₽</div>
+                    <div class="stock-status" style="color: #4CAF50; margin: 10px 0;">
+                        ✅ В наличии • Доставка сегодня
+                    </div>
+                    <button class="btn add-to-cart" data-id="3" data-name="AirPods Pro 2" style="padding: 15px 30px; font-size: 18px;">
+                        🛒 Добавить в корзину
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.location.href='index.html#airpods'" style="margin-top: 10px;">
+                        ← Назад к товарам
+                    </button>
+                </div>
+            </div>
+
+            <section class="description">
+                <h2>Описание AirPods Pro 2</h2>
+                <p><strong>AirPods Pro второго поколения</strong> с чипом H2 обеспечивают исключительное качество звука и ещё более эффективное шумоподавление. Сенсорное управление громкостью на стебле и футляр с динамиком.</p>
+                
+                <h3>Ключевые особенности:</h3>
+                <ul>
+                    <li><strong>2× лучшее шумоподавление:</strong> Новые алгоритмы подавляют больше внешнего шума</li>
+                    <li><strong>Пространственное аудио:</strong> Персонализированное с поддержкой динамического отслеживания головы</li>
+                    <li><strong>Футляр с U1 чипом:</strong> Точное определение местоположения через "Локатор"</li>
+                    <li><strong>Управление громкостью:</strong> Проведите пальцем по стеблю для регулировки</li>
+                    <li><strong>Улучшенная эргономика:</strong> 4 размера силиконовых насадок в комплекте</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- Стили для сетки характеристик -->
+        <style>
+            .specs-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+                margin: 25px 0;
+                padding: 20px;
+                background: #f8f9fa;
+                border-radius: 10px;
+            }
+            
+            .spec-item {
+                padding: 12px;
+                background: white;
+                border-radius: 8px;
+                border-left: 4px solid #0071e3;
+            }
+            
+            .spec-item strong {
+                display: block;
+                color: #1d2671;
+                margin-bottom: 5px;
+            }
+            
+            .spec-item span {
+                color: #555;
+                line-height: 1.5;
+            }
+            
+            .price {
+                font-size: 36px;
+                font-weight: bold;
+                color: #d32f2f;
+                margin: 15px 0;
+            }
+            
+            .btn-secondary {
+                background: #666;
+                color: white;
+                margin-left: 10px;
+            }
+            
+            .btn-secondary:hover {
+                background: #555;
+            }
+        </style>
     </main>
 
     <footer>
         <p>© 2024 TechStore. Лабораторная работа по SEO.</p>
+        <p>Телефон: 8 (800) 123-45-67 | Email: info@techstore-lab.ru</p>
+        <p>Адрес: Москва, ул. Техническая, 15</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
